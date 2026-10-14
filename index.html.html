@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suresh Kumar K | Insurance Operations & Automation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6fa;--surface:#fff;--ink:#0e1a2b;--muted:#4b5a70;--line:#d5deea;--blue:#1f63e0;--ok:#0f9d6b;--code:#0e1a2b;--codeink:#cfe0ff;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1422;--surface:#111e31;--ink:#e8eef8;--muted:#9bacc4;--line:#22324b;--blue:#5b94ff;--ok:#3ddc97;--code:#07101c;--codeink:#cfe0ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1422;--surface:#111e31;--ink:#e8eef8;--muted:#9bacc4;--line:#22324b;--blue:#5b94ff;--ok:#3ddc97;--code:#07101c;--codeink:#cfe0ff;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;gap:12px}
+.logo{font:700 18px "Space Grotesk",sans-serif;text-decoration:none;color:var(--ink)}
+.nav nav{display:flex;gap:18px;font-size:15px;overflow-x:auto}
+.nav nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+.nav nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 56px}
+.status{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:5px 14px;font-size:14px;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 var(--ok);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(40px,8vw,76px);margin:22px 0 14px;letter-spacing:-.02em}
+.hero p.lead{max-width:60ch;font-size:19px;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font:500 16px "IBM Plex Sans",sans-serif;text-decoration:none;border:1px solid var(--blue)}
+.btn.p{background:var(--blue);color:#fff}
+.btn.s{color:var(--blue)}
+.pipe{margin-top:48px;background:var(--code);border-radius:14px;padding:26px 22px;color:var(--codeink)}
+.pipe small{display:block;margin-bottom:18px;opacity:.7;font-size:14px}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.stage{position:relative;text-align:center;padding:0 6px}
+.stage::before{content:"";position:absolute;top:13px;left:-50%;width:100%;height:2px;background:rgba(207,224,255,.25)}
+.stage:first-child::before{display:none}
+.stage::after{content:"";position:absolute;top:13px;left:-50%;width:100%;height:2px;background:linear-gradient(90deg,transparent,#5b94ff,transparent);background-size:40% 100%;background-repeat:no-repeat;animation:flow 3.2s linear infinite}
+.stage:first-child::after{display:none}
+.stage:nth-child(3)::after{animation-delay:.5s}.stage:nth-child(4)::after{animation-delay:1s}
+@keyframes flow{from{background-position:-60% 0}to{background-position:160% 0}}
+.node{position:relative;z-index:1;width:28px;height:28px;margin:0 auto 10px;border-radius:50%;background:#1d3a6b;border:2px solid #5b94ff;display:grid;place-items:center;font-size:13px}
+.stage.on .node{background:#3ddc97;border-color:#3ddc97;color:#07101c}
+.stage b{display:block;font:500 15px "Space Grotesk",sans-serif;color:#fff}
+.stage span{font-size:13px;opacity:.75;line-height:1.3;display:block}
+section{padding:60px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(28px,4vw,38px);margin-bottom:26px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:36px}
+.facts{display:grid;gap:12px;align-content:start}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.fact b{font:700 26px "Space Grotesk",sans-serif;display:block}
+.fact span{color:var(--muted);font-size:15px}
+.tl{position:relative;padding-left:28px;border-left:2px solid var(--line);margin-left:6px}
+.tl h3{font-size:22px}
+.tl .meta{color:var(--muted);font-size:15px;margin:4px 0 20px}
+.tl::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--ok)}
+.wins{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.win h4{margin:0 0 6px;font:700 18px "Space Grotesk",sans-serif}
+.win p{margin:0;color:var(--muted);font-size:16px}
+.win.hl{border-color:var(--blue)}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.sk{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.sk h3{font-size:19px;margin-bottom:12px}
+.sk ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.sk li{border:1px solid var(--line);border-radius:6px;padding:3px 11px;font-size:15px}
+.edu{display:grid;gap:14px}
+.edu div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 20px}
+.edu b{font-family:"Space Grotesk",sans-serif}
+.edu span{color:var(--muted);font-size:15px}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:52ch;margin:0 auto 26px}
+.contact .btns{justify-content:center}
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:760px){.about,.wins,.skills{grid-template-columns:1fr}.hero{padding-top:48px}.stage span{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><a class="logo" href="#top">Suresh Kumar K</a>
+<nav aria-label="Sections"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></div></header>
+
+<main id="top">
+<div class="wrap hero">
+<div class="status"><span class="dot"></span>Available · Chennai, Tamil Nadu</div>
+<h1>Suresh Kumar K</h1>
+<p class="lead">Insurance operations associate with 5+ years at NTT DATA, turning manual processes into reliable, automated workflows. BSc Computer Science. Currently the IT team's point of contact on a Gen AI automation project.</p>
+<div class="btns"><a class="btn p" href="mailto:sureshhari814@gmail.com">Email me</a><a class="btn s" href="#experience">See my work</a></div>
+
+<div class="pipe" role="img" aria-label="Career pipeline: Computer Science degree, operations associate, quality check associate, Gen AI automation lead">
+<small>How my work has moved through the pipeline</small>
+<div class="stages">
+<div class="stage on"><div class="node">✓</div><b>BSc CS</b><span>2015–2018</span></div>
+<div class="stage on"><div class="node">✓</div><b>Operations</b><span>Aug 2020</span></div>
+<div class="stage on"><div class="node">✓</div><b>Quality check</b><span>Promoted in 1 year</span></div>
+<div class="stage on"><div class="node">●</div><b>Gen AI SPOC</b><span>Running now</span></div>
+</div></div>
+</div>
+
+<section id="about"><div class="wrap"><h2>About</h2>
+<div class="about">
+<div><p>I work in high-pressure insurance operations where accuracy and targets both matter. My strength is making processes better: documenting them clearly, checking them for failure points, and automating the repeatable parts.</p>
+<p>I also train and mentor new team members, and I lead by explaining the why behind each step so the team can work without constant supervision.</p></div>
+<div class="facts"><div class="fact"><b>5+ years</b><span>in insurance operations</span></div><div class="fact"><b>100%</b><span>automation target on the Gen AI project</span></div></div>
+</div></div></section>
+
+<section id="experience"><div class="wrap"><h2>Experience</h2>
+<div class="tl"><h3>HC & Insurance Operations Associate</h3>
+<div class="meta">NTT DATA Information Processing Services Pvt. Ltd. · Chennai · August 2020 – Present</div>
+<div class="wins">
+<div class="win hl"><h4>Gen AI Project SPOC</h4><p>Single point of contact for the IT team on a Gen AI project aiming for 100% automation.</p></div>
+<div class="win"><h4>Top Contributor</h4><p>Recognised for completing an Automation Enhancement Project.</p></div>
+<div class="win"><h4>Quality Check Associate</h4><p>Promoted within one year for consistent performance and high accuracy.</p></div>
+<div class="win"><h4>PFMEA support</h4><p>Support the TQA team on Process Failure Mode and Effects Analysis projects.</p></div>
+<div class="win"><h4>Trainer and mentor</h4><p>Appointed to onboard new team members and build their skills.</p></div>
+</div></div></div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2>
+<div class="skills">
+<div class="sk"><h3>Technical</h3><ul><li>Gen AI implementation</li><li>Automation workflows</li><li>Process logic</li><li>PFMEA</li></ul></div>
+<div class="sk"><h3>Tools and documentation</h3><ul><li>Excel</li><li>Word</li><li>PowerPoint</li><li>Outlook</li><li>SOP creation</li></ul></div>
+<div class="sk"><h3>People and delivery</h3><ul><li>Team leadership</li><li>Mentoring</li><li>Planning</li><li>Communication</li><li>Problem solving</li></ul></div>
+</div></div></section>
+
+<section id="education"><div class="wrap"><h2>Education</h2>
+<div class="edu">
+<div><b>Bachelor of Science in Computer Science</b><span>Ramakrishna Mission Vivekananda College · 2015 – 2018</span></div>
+<div><b>Higher Secondary (+12)</b><span>P.S. Matriculation Hr. Sec. School · 2013 – 2015</span></div>
+<div><b>SSLC (10th)</b><span>Sai Vidyalaya Matriculation School · 2013</span></div>
+</div>
+<p style="color:var(--muted);margin-top:20px">Languages: English, Tamil. Outside work: cricket and sports reading.</p></div></section>
+
+<section id="contact" class="contact"><div class="wrap"><h2>Let's talk</h2>
+<p>Open to conversations about operations, quality, and automation roles. Email is the fastest way to reach me.</p>
+<div class="btns"><a class="btn p" href="mailto:sureshhari814@gmail.com">sureshhari814@gmail.com</a><a class="btn s" href="tel:+918124202007">+91 81242 02007</a></div></div></section>
+</main>
+<footer>© Suresh Kumar K · Chennai, Tamil Nadu</footer>
+</body>
+</html>
